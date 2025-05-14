@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marks Result</title>
+</head>
+<body>
+    <h1>Check Your Result</h1>
+
+    <form action="/result/40" method="get">
+        <label for="marks">Enter your marks (0-100):</label>
+        <input type="number" id="marks" name="marks" min="0" max="100">
+        <button type="submit">Check Result</button>
+    </form>
+
+    {% if marks is not none %}
+        <h2>Your marks: {{ marks }}</h2>
+        <h2>Result: {{ result }}</h2>
+    {% endif %}
+</body>
+</html>
